@@ -4,7 +4,7 @@ script: $CMD
 
 env:
   global:
-    - CMD=mvn -q -B clean verify
+    - CMD='mvn -q -B clean verify'
 
 before_install:
 # os x - workaround for JAVA_HOME not set and mvn missing
@@ -28,7 +28,7 @@ matrix:
         - os: linux
           sudo: required
           jdk: openjdk7
-          env: CMD=sudo -E 'mvn -q -B clean verify'
+          env: CMD='sudo -E "mvn -q -B clean verify"'
 
 notifications:
   email:
