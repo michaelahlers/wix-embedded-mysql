@@ -29,7 +29,7 @@ matrix:
           sudo: required
           jdk: openjdk7
           #env: CMD='sudo -E su root -c \'mvn -q -B clean verify\''
-          env: CMD='sudo -E su root -c /usr/local/maven'
+          env: CMD='which mvn && sudo -E su root -c /usr/local/bin/mvn'
 
 notifications:
   email:
