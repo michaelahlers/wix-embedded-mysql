@@ -28,7 +28,7 @@ matrix:
         - os: linux
           sudo: required
           jdk: openjdk7
-          env: CMD='sudo -E su root -c "mvn -q -B clean verify"'
+          env: CMD='sudo -E su root -cp \'mvn -q -B clean verify\''
 
 notifications:
   email:
